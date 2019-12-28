@@ -1,14 +1,3 @@
 {
-  "bugtracking": [
-    {
-      "issue_name": "Tooltip Issue",
-      "issue_message": "Issue tracking is awesome because of collaboration",
-      "id": 2
-    },
-    {
-      "issue_name": "test2",
-      "issue_message": "test2test2",
-      "id": 3
-    }
-  ]
+  "bugtracking": []
 }
