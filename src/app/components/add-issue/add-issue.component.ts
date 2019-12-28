@@ -9,20 +9,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./add-issue.component.scss']
 })
 export class AddIssueComponent implements OnInit {
-
   issueForm: FormGroup;
-  issueArr: any = [];
+  IssueArr: any = [];
+
+  ngOnInit() {
+    this.addIssue();
+  }
 
   constructor(
     public fb: FormBuilder,
     private ngZone: NgZone,
     private router: Router,
     public bugService: BugService
-  ) { }
+  ){ }
 
-  ngOnInit() {
-    this.addIssue();
-  }
   addIssue() {
     this.issueForm = this.fb.group({
       issue_name: [''],
@@ -32,11 +32,10 @@ export class AddIssueComponent implements OnInit {
 
   submitForm() {
     this.bugService.createBug(this.issueForm.value).subscribe(res => {
-      console.log('Issue added!');
+      console.log('Issue added!')
       this.ngZone.run(() => this.router.navigateByUrl('/issues-list'));
     });
   }
 
-
-
 }
+
