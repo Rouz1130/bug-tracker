@@ -1,49 +1,14 @@
 {
   "bugtracking": [
     {
-      "issue_name": "Table Improvement",
-      "issue_message": "Issue tracking is awesome because of collaboration",
-      "id": 1
-    },
-    {
       "issue_name": "Tooltip Issue",
       "issue_message": "Issue tracking is awesome because of collaboration",
       "id": 2
     },
     {
-      "issue_name": "test",
-      "issue_message": "This is a test",
+      "issue_name": "test2",
+      "issue_message": "test2test2",
       "id": 3
-    },
-    {
-      "issue_name": "tttteest",
-      "issue_message": "edgdsgdgeqwtgeqrw",
-      "id": 4
-    },
-    {
-      "issue_name": "testest",
-      "issue_message": "etrewtewqtewqrteqw",
-      "id": 5
-    },
-    {
-      "issue_name": "testest",
-      "issue_message": "etrewtewqtewqrteqw",
-      "id": 6
-    },
-    {
-      "issue_name": "test",
-      "issue_message": "test",
-      "id": 7
-    },
-    {
-      "issue_name": "testedit",
-      "issue_message": "does edit work",
-      "id": 8
-    },
-    {
-      "issue_name": "test4",
-      "issue_message": "tereererer",
-      "id": 9
     }
   ]
 }

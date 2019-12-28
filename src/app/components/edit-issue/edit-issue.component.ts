@@ -22,6 +22,7 @@ export class EditIssueComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.updateForm();
   }
 
   updateForm() {

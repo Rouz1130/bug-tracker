@@ -16,6 +16,7 @@ export class IssueListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.loadEmployees();
   }
 
   loadEmployees() {
@@ -23,17 +24,12 @@ export class IssueListComponent implements OnInit {
       this.IssuesList = data;
     });
   }
-
-  deleteIssue(data) {
-    var index = index = this.IssuesList.map(x => {
-      return x.issue_name;
-    }).indexOf(data.issue_name);
-    return this.bugService.deleteBug(data.id).subscribe(res => {
-      this.IssuesList.splice(index, 1);
-      console.log('issue deleted!');
-    });
-  }
-
-
-
+     // Delete issue
+     deleteIusse(data){
+      var index = index = this.IssuesList.map(x =>x.issue_name).indexOf(data.issue_name);
+      return this.bugService.deleteBug(data.id).subscribe(res => {
+        this.IssuesList.splice(index, 1);
+        console.log('Issue deleted!');
+       });
+    }
 }
