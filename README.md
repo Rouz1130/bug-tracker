@@ -11,10 +11,13 @@ A bug tracker project, nothing fancy. CRUD operartions with observables; for the
 
 ## Technologies Used
 
-Angular cli 7
-Angular Material
+Angular cli 9
+Boostrap
+Json-Server
+RxJs
 
 ### 
+
 Dec 27, 2019 &nbsp; Rouz Majlessi
 <br/>
 Atec dev
