@@ -11,6 +11,7 @@ import { BugService } from './shared/bug.service';
 import { AppComponent } from './app.component';
 import { AddIssueComponent } from './components/add-issue/add-issue.component';
 import { IssueListComponent } from './components/issue-list/issue-list.component';
+import { EditIssueComponent } from './components/edit-issue/edit-issue.component';
 
 
 
@@ -22,6 +23,7 @@ import { IssueListComponent } from './components/issue-list/issue-list.component
     AppComponent,
     AddIssueComponent,
     IssueListComponent,
+    EditIssueComponent,
   ],
   imports: [
     BrowserModule,
