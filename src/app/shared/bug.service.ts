@@ -17,6 +17,7 @@ export class BugService {
       'Content-Type': 'application/json'
     })
   };
+
   // Post
   createBug(data): Observable<Bug> {
     return this.http
@@ -26,6 +27,42 @@ export class BugService {
         this.httpOptions
       )
       .pipe(retry(1), catchError(this.errorHandl));
+  }
+
+  // Get
+  getIssue(id): Observable<Bug> {
+    return this.http.get<Bug>(this.baseurl + '/bugtracking/' + id)
+    .pipe(
+      retry(1),
+      catchError(this.errorHandl)
+    );
+  }
+
+  // GetAll
+  getIssues(): Observable<Bug> {
+    return this.http.get<Bug>(this.baseurl + '/bugtracking/')
+    .pipe(
+      retry(1),
+      catchError(this.errorHandl)
+    );
+  }
+
+  // Put
+  updateBug(id, data): Observable<Bug> {
+    return this.http.put<Bug>(this.baseurl + '/bugtracking/' + id,JSON.stringify(data), this.httpOptions)
+    .pipe(
+      retry(1),
+      catchError(this.errorHandl)
+    );
+  }
+
+  // Delete
+  deleteBug(id) {
+    return this.http.delete<Bug>(this.baseurl + '/bugtracking/' + id, this.httpOptions)
+    .pipe(
+      retry(1),
+      catchError(this.errorHandl)
+    );
   }
 
   errorHandl(error) {
